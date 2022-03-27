@@ -11,7 +11,8 @@ html,
 body,
 #__next {
   height: 100%;
-  color: var(--color-2-text);
+  color: var(--text);
+  background-color: var(--bg);
 }
 img,
 picture,
