@@ -1,0 +1,46 @@
+.wrapper {
+  padding-top: var(--size-8);
+  padding-left: var(--size-4);
+  padding-right: var(--size-4);
+  max-width: 700px;
+  margin: 0 auto;
+  flex: 1;
+
+  .btnBack {
+    border-radius: var(--radius-1);
+    background-color: var(--card-bg);
+    padding: var(--size-2) var(--size-4);
+    margin-bottom: var(--size-4);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .innerWrapper {
+    transform: translateY(10px);
+    animation: 400ms slideUp ease-out forwards;
+  }
+  .intro {
+    text-align: center;
+    margin-bottom: var(--size-4);
+  }
+
+  h2 {
+    margin-top: var(--size-3);
+    margin-bottom: var(--size-5);
+  }
+  p {
+    margin-bottom: var(--size-5);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0.6;
+    transform: translateY(2%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,54 @@
+@import "./breakpoints";
+
+.card {
+  background-color: var(--card-bg);
+  padding: var(--size-4);
+  border-radius: var(--radius-1);
+  transform: translateY(30px);
+  opacity: 0;
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+    @include respond-above(sm) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: var(--size-3);
+  }
+  &About {
+    max-width: 50ch;
+    margin-bottom: var(--size-3);
+  }
+  &Status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-above(sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .topic {
+      padding: var(--size-2) var(--size-3);
+      background-color: var(--topic);
+      border-radius: var(--size-4);
+      @include respond-above(sm) {
+        margin-bottom: var(--size-2);
+      }
+    }
+    .topic,
+    .postDate {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 600ms ease-out, opacity 600ms ease-out,
+    background-color 200ms ease-out;
+}

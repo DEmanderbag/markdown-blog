@@ -1,0 +1,25 @@
+.navigation {
+  background-color: var(--nav);
+  padding: var(--size-3) var(--size-4);
+  &Flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  &Logo {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  .languages {
+    display: flex;
+    li:not(:last-child) {
+      margin-right: var(--size-4);
+      align-items: centers;
+    }
+    a {
+      font-weight: 600;
+    }
+  }
+}

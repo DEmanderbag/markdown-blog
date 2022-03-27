@@ -1,0 +1,25 @@
+@import "./breakpoints";
+
+.main {
+  flex: 1;
+  padding: var(--size-9) var(--size-4);
+  @include respond-above(md) {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-top: var(--space-1);
+  }
+  .intro {
+    margin-bottom: var(--size-8);
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  .title {
+    margin-bottom: var(--size-2);
+  }
+  .message {
+    padding-top: var(--size-3);
+    padding-bottom: var(--size-3);
+    font-weight: 600;
+  }
+}
