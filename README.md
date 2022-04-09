@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Table of contents:
+- [How does it work](#how-does-it-work)
+- [About the project](#about-the-project)
+- [Language support](#language-support)
 
-## Getting Started
+## How does it work
 
-First, run the development server:
+Simple and easy solution for your first blog with support for multiple languages (as many as you know them). The website is optimised and responsive and it comes with light and dark modes, easily customizable. Data is coming from the Markdown file that is located in the posts folder.
 
-```bash
-npm run dev
-# or
-yarn dev
+---
+
+## About the project
+
+This project comes out of the box with the support for English (EN) and German (DE) languages. Data is located in the posts folder which is additionally separated by specific topic. Code is simple and easy to understand with customisation in mind. You can change colours, fonts and even languages that are supported with just a couple of lines of code.
+
+This project is using Next.js with internalization (i18n) support and generates data with getStaticProps and getStaticPaths.
+
+To generate a new post all you need to do is create a new folder inside the post folder that will contain the name of the article. The name of the folder is what it will show up as a link.
+
+If you are planning to add additional languages that are also very simple, just add that language inside the i18n.json file in the locales array. Inside the locales folder, you are also going to add that local with a specific translation. And in other, for the posts to support that new language just inside the specific post folder add an index.[locale].md
+
+Colours are located in \_variables.scss file and are separated for both dark and light mode which can be easily changed to make it feel unique.
+
+---
+
+## Language support
+
+This project comes out of the box with the support for English (EN) and German (DE) languages. But if you know other languages that are also simple to set up.
+
+Inside the i18n.json file inside the locales array just add a local for the language you want to support.
+
+```
+ {
+ "locales": ["en", "de", "new locale"],
+ "defaultLocale": "en",
+ "pages": {
+   "*": ["common"]
+ }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The next step is to add a translation for UI elements on the website. To do that inside the locales folder create a new folder with the name of your locale that was previously added inside the i18n.json file.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You are ready to go now, you are now supporting a new language. When creating posts inside the post folder just don't forget to add a file for your new supported language, the file should be named index.[locale].md
