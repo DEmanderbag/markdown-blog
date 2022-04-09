@@ -39,3 +39,9 @@ button {
   border: none;
   font: inherit;
 }
+code {
+  background-color: var(--nav);
+}
+pre {
+  margin-bottom: var(--size-5);
+}
