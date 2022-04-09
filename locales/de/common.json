@@ -1,5 +1,6 @@
 {
   "greeting": "Willkommen im Minimal-Blog!",
   "target": "Eine minimale, auf Typografie ausgerichtete Blog-Vorlage, die von NextJS + Markdown unterstützt wird",
-  "goBack": "Geh zurück"
+  "goBack": "Geh zurück",
+  "createdBY": "Erstellt von"
 }
