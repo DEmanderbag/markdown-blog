@@ -43,7 +43,7 @@ const Post = (posts) => {
             <a>
               <div className={styles.cardWrapper}>
                 <div className={styles.cardAbout}>
-                  <h3>{post.title}</h3>
+                  <h2 className={styles.title}>{post.title}</h2>
                   <p>{post.excerpt}</p>
                 </div>
                 <div className={styles.cardStatus}>

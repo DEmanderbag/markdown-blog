@@ -1,3 +1,5 @@
+@import "./breakpoints";
+  
 .wrapper {
   padding-top: var(--size-8);
   padding-left: var(--size-4);
@@ -5,7 +7,10 @@
   max-width: 700px;
   margin: 0 auto;
   flex: 1;
-
+  @include respond-above(md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .btnBack {
     border-radius: var(--radius-1);
     background-color: var(--card-bg);
